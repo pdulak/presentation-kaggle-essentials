@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Czym jest Kaggle - jak zacząć i wygrać :)</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h1>Czym jest Kaggle</h1>
+					<p>jak zacząć i wygrać :)</p>
+					<p><img src="assets/dw-logo.png" style="width: 300px; border: 0px"></p>
+				</section>
+				
+				<section>
+					<h3>Paweł Dulak</h3>
+					<ul>
+						<li>programista / PM w Binary Minds</li>
+						<li>ColdFusion</li>
+						<li>AWS</li>
+						<li>Security</li>
+						<li>Practical machine learning</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>Kaggle</h3>
+					<p>
+						<a href="https://www.kaggle.com/">https://www.kaggle.com/</a> 
+					</p>
+					<ul>
+						<li>od 2010 roku -> platforma data science</li>
+						<li>od 2017 własność Google</li>
+					</ul>
+					<img src="assets/kaggle-main-2.png" style="width: 70%" />
+					<aside class="notes">
+						<ul>
+							<li>zbiór źródeł danych, gotowych rozwiązań (kernele), miejsce dyskusji i prowadzenia projektów badawczych</li>
+							<li>nie tylko dla wyjadaczy. Uczenie się przez Kaggle praktycznie od zera</li>
+						</ul>
+					</aside>
+				</section>
+				
+				<section>
+					<h3>Kaggle</h3>
+					<ul>
+						<li>Nauka i trening</li>
+						<li>Konkursy</li>
+						<li>Kernele</li>
+						<li>Społeczność</li>
+						<li>Dane</li>
+						<li>Portfolio i marka osobista</li>
+						<li>Szukanie pracy i szukanie pracowników</li>
+						<li>Uruchomienie własnego konkursu</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li>Nauka - praktyczne wyzwania, różne dziedziny (obrazy, regresje, NLP, egzotyka)</li>
+							<li>Konkursy - nutka rywalizacji, ranking na tle innych, nagrody</li>
+							<li>Kernele - przykłady do nauki</li>
+							<li>Dane - ponad 16.000 zbiorów</li>
+							<li>Portfolio - pokaz tego co robię</li>
+							<li>Hosting konkursów - dla znajomych, dla każdego z nagrodami, narzędzie rekrutacji</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Pierwsze kroki</h3>
+					<ul>
+						<li>rejestracja :)</li>
+						<li>prosty konkurs
+							<img src="assets/kaggle-competitions.png" style="width: 600px; display: block" />
+						</li>
+					</ul>
+					
+					<aside class="notes">
+						<ul>
+							<li>warto zacząć od prostych konkursów</li>
+							<li>konkursy zakończone także są dostępne - late submission</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Pierwsze kroki - c.d.</h3>
+					<p>
+						<img src="assets/kaggle-competition-description.png"  />
+						<a href="https://www.kaggle.com/c/titanic/data" target="_blank">Dane: https://www.kaggle.com/c/titanic/data</a>
+					</p>
+					<aside class="notes">
+						<ul>
+							<li>podstawowe informacje o konkursie</li>
+							<li>reguły</li>
+							<li>dołączenie do konkursu jeśli chce się wysyłać wyniki</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Dane</h3>
+					<p>Co dostajemy:</p>
+					<ul>
+						<li>dane treningowe i testowe</li>
+						<li>przykładowy plik z wynikami (nie zawsze)</li>
+					</ul>
+					<p>Analiza danych</p>
+					<ul>
+						<li>co tak naprawdę dostaliśmy</li>
+						<li>czy są jakieś dane nadmiarowe w zbiorze treningowym</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Podstawowe rozwiązanie</h3>
+					<ul>
+						<li>wczytanie danych</li>
+						<li>wyczyszczenie danych (braki)</li>
+						<li>wybór podstawowych cech</li>
+						<li>najprostszy model - uczenie modelu</li>
+						<li>predykcja za pomocą modelu</li>
+						<li>zapis wyników do pliku i wysłanie na Kaggle</li>
+					</ul>
+					<aside class="notes">
+						Zamiast budować samemu można pobrać przykładowy kernel
+					</aside>
+				</section>
+
+				<section>
+					<h3>Pierwsze rozwiązanie działa, co dalej?</h3>
+					<p>Przede wszystkim analiza danych</p>
+					<ul>
+						<li>braki - jak uzupełnić?</li>
+						<li>typy danych - konwersje?</li>
+						<li>rozkład - czy warto stosować logarytm?</li>
+						<li>wizualizacja zależności między cechami a zmienną docelową, korelacje</li>
+						<li>dane nadmiarowe względem zbioru testowego</li>
+					</ul>
+					<aside class="notes">
+						Wiele osób idzie od razu w poprawianie modelu, szukanie skomplikowanych rozwiązań zamiast pracować z danymi.
+					</aside>
+				</section>
+
+				<section>
+					<h3>Doskonalenie rozwiązania</h3>
+					<ul>
+						<li>CV - cross validation
+							<ul>
+								<li>sprawdza czy model działa poprawnie</li>
+								<li>daje metrykę - czy idziemy do przodu</li>
+							</ul>
+						</li>
+						<li>automatyzacja testowania nowych pomysłów</li>
+						<li>tworzenie, dodawanie cech</li>
+						<li>śledzenie postępów</li>
+						<li>(szukanie zewnętrznych źródeł danych)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Doskonalenie - c.d.</h3>
+					<ul>
+						<li>badanie ważności cech</li>
+						<li>krzywa uczenia</li>
+						<li>zmiana parametrów modelu</li>
+						<li>zmiana modelu</li>
+					</ul>
+					<aside class="notes">
+						Optymalizatory nie zawsze działają tak jak chcemy. Patrz - tydzień trzeci wyzwania, autokeras nie radził sobie z przygotowaniem modelu. 
+						Czasem dostajemy gorsze wyniki mimo że CV pokazuje że są lepsze
+					</aside>
+				</section>
+
+				<section>
+					<h3>Postępy</h3>
+					<ul>
+						<li>notowanie metryk z CV i z Kaggle</li>
+						<li>wersjonowanie kernela</li>
+						<li>śledzenie tablicy wyników</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Podsumowanie</h3>
+					<ul>
+						<li>Zrozumienie danych jest ważne</li>
+						<li>praca na danych jest bardzo ważna</li>
+						<li>poprawianie parametrów modelu lub zmiany modelu mogą pomóc</li>
+						<li>...czy wspomniałem że najważniejsze są dane?</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Dziękuję</h2>
+					<p>Pytania?</p>
+					<p style="margin: 0; font-size: 80%">
+						<a href="https://www.linkedin.com/in/pawel-dulak/" style="display: flex; align-items:center; justify-content: center;"><img src="assets/In-Blue-40.png" style="border: 0px; margin-right:4px"><span>/pawel-dulak/</span></a>
+					</p>
+					<p style="margin: 0; font-size: 80%">
+						<a href="https://github.com/pdulak" style="display: flex; align-items:center; justify-content: center;"><img src="assets/GitHub_Logo_White.png" style="height: 40px; border: 0px; margin-right:4px"><span>/pdulak</span></a>
+					</p>
+					<p style="margin: 0; font-size: 80%">
+						pawel (at) dulak.pl
+					</p>
+					<p><img src="assets/dw-logo.png" style="width: 300px"></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
